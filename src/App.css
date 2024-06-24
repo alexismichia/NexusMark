@@ -1,0 +1,50 @@
+/* src/App.css */
+.App {
+  font-family: 'Arial, sans-serif';
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+  background: #000; /* Fondo base negro */
+  overflow: hidden;
+  position: relative;
+}
+
+@keyframes star {
+  from {transform: translateY(0px);}
+  to {transform: translateY(-2000px);}
+}
+
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: transparent;
+  z-index: 0;
+}
+
+.stars:before {
+  content: '';
+  position: absolute;
+  top: 2000px;
+  width: 1px;
+  height: 1px;
+  box-shadow: 0 0 #fff, 50px 200px #fff, 100px 400px #fff, 150px 600px #fff, 
+              200px 800px #fff, 250px 1000px #fff, 300px 1200px #fff, 350px 1400px #fff, 
+              400px 1600px #fff, 450px 1800px #fff, 500px 2000px #fff;
+  animation: star 50s linear infinite;
+}
+.stars:after {
+  content: '';
+  position: absolute;
+  top: 2000px;
+  width: 2px;
+  height: 2px;
+  box-shadow: 0 0 #fff, 100px 200px #fff, 200px 400px #fff, 300px 600px #fff, 
+              400px 800px #fff, 500px 1000px #fff, 600px 1200px #fff, 700px 1400px #fff, 
+              800px 1600px #fff, 900px 1800px #fff, 1000px 2000px #fff;
+  animation: star 100s linear infinite;
+}
